@@ -6,7 +6,7 @@ This project simulates and detects Denial of Service (DoS) attacks using Python.
 
 Before getting started, make sure to install the necessary dependencies. You can install them using pip:
 
-pip install scapy requests pandas matplotlib cartopy
+pip install scapy requests pandas matplotlib cartopy quart
 
 Usage Instructions
 Attacker Machine
