@@ -1,33 +1,38 @@
-<h1 align="center">SniffnDetect 2.0</h1>
+# DOS Attack Simulation and Detection
 
-## What is SniffnDetect 2.0 ?
+This project simulates and detects Denial of Service (DoS) attacks using Python. The detected attacks are logged into a CSV file, which is then analyzed in a Jupyter notebook.
 
-SniffnDetect 2.0 is an advanced DDOS detector tool written in Python3. It will sniff all the traffic in your network and identify attacks like:
+## Dependencies
 
-- SYN Flood Attack
-- SYN-ACK Flood Attack
-- ICMP Smurf Attack
-- Ping of Death
+Before getting started, make sure to install the necessary dependencies. You can install them using pip:
 
-After detecting those attack(s), it will also try to find the source of the attack and provide the details of the attacker(s). This version of SniffnDetect has been heavily optimized and by utilizing threads, Quart framework, and WebSockets, it also provides a beautiful Web User Interface for the user.
+pip install scapy requests pandas matplotlib cartopy quart
 
-## Upcoming Features
+Usage Instructions
+Attacker Machine
 
-- More attack detection algorithms
-- Defense mechanisms to counteract DDOS attacks (LINUX only)
-- Better animations and transitions in Web UI
+    Open a terminal.
 
-## Installation
-```
-$ git clone https://github.com/priyamharsh14/SniffnDetect.git
-$ cd SniffnDetect
-/SniffnDetect/$ pip install -r requirements.txt
-```
+    Run the attacks.py script using the following command:
 
-## Usage
+    python3 attacks.py <target IP> <attack type> <attack duration>
 
-NOTE: Script must run in root (in Linux) or Administrator (in Windows)
-```
-/SniffnDetect/$ sudo python3 app.py
-```
-This will start the web interface at your local port 5000. Now, you can simply fire up your browser and go to 127.0.0.1:5000 to access it.
+    Replace <target IP> with the IP address of the victim machine, <attack type> with the desired attack type (syn_ack, smurf, syn_flood, pod), and <attack duration> with the duration in seconds.
+
+Victim Machine
+
+    Open another terminal.
+
+    Launch the detection application with:
+
+    python3 app.py
+
+    Open your browser and navigate to http://127.0.0.1:5000.
+
+    Click on the Start button to begin detecting attacks. This will log the data into the attack_logs.csv file, which is used by the Jupyter notebook.
+
+Jupyter Notebook
+
+    Open the notebook.ipynb file in Jupyter Notebook.
+    Run each cell by clicking "Run" or pressing Shift + Enter.
+    The cells will analyze the data contained in attack_logs.csv and produce relevant visualizations.
