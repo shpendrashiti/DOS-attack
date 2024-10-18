@@ -36,3 +36,5 @@ Jupyter Notebook
     Open the notebook.ipynb file in Jupyter Notebook.
     Run each cell by clicking "Run" or pressing Shift + Enter.
     The cells will analyze the data contained in attack_logs.csv and produce relevant visualizations.
+
+    **NOTE** If there is a lot of logs on the attack_logs.csv database we need to wait for a while for the map to generate so please be patient after running the notebook!
